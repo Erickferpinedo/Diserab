@@ -1,10 +1,10 @@
 'use Client'
 import React from 'react'
-import Animation from './componentes/Animation';
 import Navbar from './componentes/Navbar';
 import HomePage from './componentes/homePage';
 import AboutUs from './componentes/AboutUs' ;
 import Footer from './componentes/Footer';
+import QuestionnaireForm from './componentes/QuestionnaireForm';
 import Services from './componentes/Services';
 
 const page = () => {
@@ -12,10 +12,10 @@ const page = () => {
     <main>
      
       <Navbar />
-      <Animation />
      <HomePage />
+     <Services />
       <AboutUs />
-      <Services />
+<QuestionnaireForm />
       <Footer />
     </main>
   )

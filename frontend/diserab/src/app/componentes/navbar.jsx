@@ -1,5 +1,4 @@
-"use client"; // This marks the component as a client component
-
+"use client";
 import { useState } from "react";
 import Link from "next/link";
 
@@ -7,58 +6,65 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-neutral-600	 text-white px-6 py-4">
-      <div className="flex items-center justify-between">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold tracking-wide hover:text-gray-300">
+        <Link href="#home" className="text-xl font-semibold text-black hover:text-gray-700 transition">
           DISERAB
         </Link>
 
-        {/* Toggle button for mobile */}
-        <button
-          className="block md:hidden focus:outline-none"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <span className="block w-6 h-0.5 bg-white mb-1"></span>
-          <span className="block w-6 h-0.5 bg-white mb-1"></span>
-          <span className="block w-6 h-0.5 bg-white"></span>
-        </button>
-
-        {/* Links for desktop */}
+        {/* Enlaces para desktop */}
         <div className="hidden md:flex space-x-8">
-          <Link href="/about" className="hover:text-gray-300 transition relative group">
-            <span className="group-hover:after:absolute group-hover:after:left-0 group-hover:after:bottom-0 group-hover:after:h-0.5 group-hover:after:w-full group-hover:after:bg-gray-300 after:content-['']"></span>
+          <Link href="#about-us" className="relative text-black hover:text-gray-700 transition group">
             Sobre Nosotros
+            <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
           </Link>
-          <Link href="/services" className="hover:text-gray-300 transition relative group">
-            <span className="group-hover:after:absolute group-hover:after:left-0 group-hover:after:bottom-0 group-hover:after:h-0.5 group-hover:after:w-full group-hover:after:bg-gray-300 after:content-['']"></span>
+          <Link href="#services" className="relative text-black hover:text-gray-700 transition group">
             Servicios
+            <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
           </Link>
-          <Link href="/portfolio" className="hover:text-gray-300 transition relative group">
-            <span className="group-hover:after:absolute group-hover:after:left-0 group-hover:after:bottom-0 group-hover:after:h-0.5 group-hover:after:w-full group-hover:after:bg-gray-300 after:content-['']"></span>
-            Portafolio
-          </Link>
-          <Link href="/contact" className="hover:text-gray-300 transition relative group">
-            <span className="group-hover:after:absolute group-hover:after:left-0 group-hover:after:bottom-0 group-hover:after:h-0.5 group-hover:after:w-full group-hover:after:bg-gray-300 after:content-['']"></span>
-            Contactanos
+          
+          <Link href="#contact" className="relative text-black hover:text-gray-700 transition group">
+            Contáctanos
+            <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
           </Link>
         </div>
+
+        {/* Botón para mobile */}
+        <button
+          className="md:hidden flex flex-col items-center justify-center w-8 h-8 focus:outline-none"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          <span
+            className={`block h-0.5 w-full bg-black transform transition duration-300 ease-in-out ${
+              isOpen ? "rotate-45 translate-y-1.5" : ""
+            }`}
+          ></span>
+          <span
+            className={`block h-0.5 w-full bg-black my-1 transition-all duration-300 ease-in-out ${
+              isOpen ? "opacity-0" : ""
+            }`}
+          ></span>
+          <span
+            className={`block h-0.5 w-full bg-black transform transition duration-300 ease-in-out ${
+              isOpen ? "-rotate-45 -translate-y-1.5" : ""
+            }`}
+          ></span>
+        </button>
       </div>
 
-      {/* Links for mobile */}
+      {/* Enlaces para mobile */}
       {isOpen && (
-        <div className="mt-4 space-y-4 md:hidden">
-          <Link href="/about" className="block hover:text-gray-300 transition">
-            Sobre Nostros
+        <div className="md:hidden px-6 pb-4 transition-all duration-300 ease-in-out">
+          <Link href="about" className="block py-2 text-black hover:text-gray-700 transition">
+            Sobre Nosotros
           </Link>
-          <Link href="/services" className="block hover:text-gray-300 transition">
+          <Link href="services" className="block py-2 text-black hover:text-gray-700 transition">
             Servicios
           </Link>
-          <Link href="/portfolio" className="block hover:text-gray-300 transition">
-            Portafolio
-          </Link>
-          <Link href="/contact" className="block hover:text-gray-300 transition">
-            Contactanos
+          
+          <Link href="contact" className="block py-2 text-black hover:text-gray-700 transition">
+            Contáctanos
           </Link>
         </div>
       )}

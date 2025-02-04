@@ -1,78 +1,63 @@
-'Use client'
-import React from 'react'
-
+import React from 'react';
 
 const Services = () => {
-    return (
-        <div className="bg-black text-white min-h-screen py-16 px-6">
-          <h2 className="text-3xl font-bold text-center mb-6">Nuestros Servicios</h2>
-          <p className="text-gray-400 text-center max-w-3xl mx-auto mb-12">
-            En <span className="text-white font-semibold">DISERAB</span>, ofrecemos una variedad de servicios diseñados para satisfacer todas tus necesidades de construcción, garantizando calidad y eficiencia en cada proyecto.
-          </p>
-    
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-gray-800 p-6 rounded-lg text-center">
-              <h3 className="text-xl font-semibold mb-4">Asesoría Personalizada</h3>
-              <p className="text-gray-400 mb-4">
-                Te ayudamos a elegir los materiales y maquinaria ideales para tu proyecto.
-              </p>
-              <button className="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition transform hover:scale-105 duration-300">
-                Más Información
-              </button>
-            </div>
-    
-            <div className="bg-gray-800 p-6 rounded-lg text-center">
-              <h3 className="text-xl font-semibold mb-4">Alquiler de Maquinaria</h3>
-              <p className="text-gray-400 mb-4">
-                Disponemos de maquinaria moderna para satisfacer las demandas de tu obra.
-              </p>
-              <button className="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition transform hover:scale-105 duration-300">
-                Ver Más
-              </button>
-            </div>
-    
-            <div className="bg-gray-800 p-6 rounded-lg text-center">
-              <h3 className="text-xl font-semibold mb-4">Suministro de Materiales</h3>
-              <p className="text-gray-400 mb-4">
-                Cemento, varillas, bloques de concreto y más para tus proyectos.
-              </p>
-              <button className="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition transform hover:scale-105 duration-300">
-                Ver Productos
-              </button>
-            </div>
-    
-            <div className="bg-gray-800 p-6 rounded-lg text-center">
-              <h3 className="text-xl font-semibold mb-4">Transporte y Logística</h3>
-              <p className="text-gray-400 mb-4">
-                Entregamos tus pedidos de manera rápida y segura en el lugar que necesites.
-              </p>
-              <button className="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition transform hover:scale-105 duration-300">
-                Contáctanos
-              </button>
-            </div>
-    
-            <div className="bg-gray-800 p-6 rounded-lg text-center">
-              <h3 className="text-xl font-semibold mb-4">Consultoría en Construcción</h3>
-              <p className="text-gray-400 mb-4">
-                Expertos a tu disposición para asesorarte en cada etapa de tu proyecto.
-              </p>
-              <button className="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition transform hover:scale-105 duration-300">
-                Más Información
-              </button>
-            </div>
-    
-            <div className="bg-gray-800 p-6 rounded-lg text-center">
-              <h3 className="text-xl font-semibold mb-4">Soporte Técnico</h3>
-              <p className="text-gray-400 mb-4">
-                Atención especializada para resolver cualquier duda o inconveniente.
-              </p>
-              <button className="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition transform hover:scale-105 duration-300">
-                Contáctanos
-              </button>
-            </div>
+  return (
+    <>
+      {/* Sección de Servicios Clave */}
+      <section id='services'  className="py-12 px-4 sm:px-8 bg-gradient-to-b from-gray-800 to-gray-900">
+        <h2  className="text-3xl sm:text-4xl font-bold text-center mb-10 text-white">
+          Nuestros Servicios Clave
+        </h2>
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div className="bg-neutral-800 p-8 rounded-xl transform transition duration-300 ease-out hover:shadow-2xl hover:-translate-y-2 hover:scale-105">
+            <h3 className="text-2xl font-semibold mb-4 text-white">
+              Distribución de Acero, Hierro y Cemento
+            </h3>
+            <p className="text-gray-400 text-base">
+              Suministramos materiales de la más alta calidad para tu proyecto, asegurando resistencia y durabilidad en cualquier obra.
+            </p>
+          </div>
+          <div className="bg-neutral-800 p-8 rounded-xl transform transition duration-300 ease-out hover:shadow-2xl hover:-translate-y-2 hover:scale-105">
+            <h3 className="text-2xl font-semibold mb-4 text-white">
+              Alquiler de Maquinaria
+            </h3>
+            <p className="text-gray-400 text-base">
+              Ponemos a tu disposición equipos modernos y seguros, optimizando costos y tiempos en cada fase de la construcción.
+            </p>
+          </div>
+          <div className="bg-neutral-800 p-8 rounded-xl transform transition duration-300 ease-out hover:shadow-2xl hover:-translate-y-2 hover:scale-105">
+            <h3 className="text-2xl font-semibold mb-4 text-white">
+              Ejecución de Obras Civiles
+            </h3>
+            <p className="text-gray-400 text-base">
+              Contamos con profesionales experimentados para desarrollar proyectos civiles con altos estándares de calidad y seguridad.
+            </p>
+          </div>
+          <div className="bg-neutral-800 p-8 rounded-xl transform transition duration-300 ease-out hover:shadow-2xl hover:-translate-y-2 hover:scale-105">
+            <h3 className="text-2xl font-semibold mb-4 text-white">
+              Transporte de Materiales
+            </h3>
+            <p className="text-gray-400 text-base">
+              Aseguramos entregas puntuales y seguras de tus materiales en cualquier punto de Cesar y otras regiones de Colombia.
+            </p>
           </div>
         </div>
-      );
-    };
+      </section>
+
+      {/* Sección de Llamado a la Acción */}
+      <section className="bg-gray-900 py-20 px-4 sm:px-8 text-center">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-white">
+          ¡Construye con los Mejores!
+        </h2>
+        <p className="text-gray-400 mb-8 text-lg max-w-2xl mx-auto">
+          Pon en marcha tus proyectos de construcción con la solidez de nuestros materiales y la experiencia de nuestro equipo. Operamos en todo el departamento de Cesar y en el resto de Colombia para brindarte un servicio ágil y de confianza.
+        </p>
+        <button href="#contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded-lg hover:from-blue-600 hover:to-blue-800 transition transform hover:scale-105 duration-300">
+          Solicita tu Cotización
+        </button>
+      </section>
+    </>
+  );
+};
 
 export default Services;
